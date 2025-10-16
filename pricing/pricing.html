@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="icon" type="image/png" href="../images/water.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- General Contact Popup -->
+    <div
+      id="booking"
+      class="fixed hidden inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[200]"
+    >
+      <!-- Popup Card -->
+      <div
+        id="booking_card"
+        class="bg-white w-[90%] max-w-lg rounded-2xl shadow-2xl p-8 relative animate-fadeIn"
+      >
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+          <div class="flex items-center gap-2">
+            <img src="../images/water.png" alt="" class="w-10 h-10" />
+            <h1 class="text-2xl font-semibold text-[#202B93]">LaundryPro</h1>
+          </div>
+          <button
+            id="close_booking-price-page"
+            class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
+          >
+            <img src="../images/close-window.png" alt="Close" class="w-6 h-6" />
+          </button>
+        </div>
+
+        <!-- Content -->
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-bold mb-2 text-[#202B93]">
+            Book Your Laundry Service
+          </h2>
+          <p class="text-gray-600">
+            Schedule your laundry pick-up or drop-off in seconds. We’ll handle
+            the rest.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form class="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+
+          <div class="relative">
+            <input
+              id="datetime"
+              type="datetime-local"
+              class="peer border border-gray-300 w-full rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            <label
+              for="datetime"
+              class="absolute left-3 top-3 text-gray-400 transition-all peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-500 bg-white px-1"
+            >
+              Select date
+            </label>
+          </div>
+
+          <!-- Description Textarea -->
+          <textarea
+            placeholder="Add any special instructions or details (optional)"
+            rows="4"
+            class="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="bg-[#FFD06D] text-[#202B93] font-semibold py-3 rounded-lg hover:bg-yellow-400 transition"
+          >
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation bar -->
+    <nav
+      id="mobile_nav"
+      class="hidden fixed top-0 bottom-0 w-full h-full bg-white z-100"
+    >
+      <div class="flex items-center justify-between py-6 px-3 mb-10">
+        <div class="flex items-center gap-2">
+          <div class="w-[40px] h-[40px]">
+            <img class="w-full h-auto" src="../images/water.png" alt="" />
+          </div>
+          <h1 class="text-2xl font-semibold">LaundryPro</h1>
+        </div>
+        <div id="close-price-page" class="w-[60px] h-[60px]">
+          <img class="w-full h-auto" src="../images/close-window.png" alt="" />
+        </div>
+      </div>
+      <ul class="px-4 font-semibold">
+        <li id="how_it_works_pricing_page" class="text-4xl mb-8">
+          <a href="../home/index.html">How it works</a>
+        </li>
+        <li class="text-4xl mb-8">Prices & Services</li>
+        <li class="text-4xl mb-8">About us</li>
+        <li class="text-4xl mb-8">For business</li>
+      </ul>
+
+      <p class="mb-5 pl-4">Follow us</p>
+      <ul class="flex items-center gap-2 px-4">
+        <li class="w-[40px] h-[40px]">
+          <img
+            class="w-full object-cover"
+            src="../images/facebook.png"
+            alt=""
+          />
+        </li>
+        <li class="w-[40px] h-[40px]">
+          <img
+            class="w-full object-cover"
+            src="../images/instagram.png"
+            alt=""
+          />
+        </li>
+        <li class="w-[40px] h-[40px]">
+          <img class="w-full object-cover" src="../images/twitter.png" alt="" />
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="w-full bg-[#0890F3] px-6">
+      <nav
+        id="navbar"
+        class="w-full h-18 md:h-23 text-white px-0 lg:px-12 flex items-center justify-between z-50 transition-all duration-400"
+      >
+        <div class="flex items-center md:gap-20">
+          <div class="flex items-center gap-2">
+            <div class="w-[40px] h-[40px]">
+              <img class="w-full h-auto" src="../images/water.png" alt="" />
+            </div>
+            <h1 class="text-2xl font-semibold">LaundryPro</h1>
+          </div>
+          <ul class="hidden w-[450px] lg:flex space-x-8 sm:text-sm lg:text-lg">
+            <li>
+              <a href="../home/index.html" class="">Home</a>
+            </li>
+            <li>
+              <a href="../home/index.html" class="">Services</a>
+            </li>
+            <li>
+              <a href="#pricing" class="">Pricing</a>
+            </li>
+            <li>
+              <a href="#contact" class="">Contact</a>
+            </li>
+            <li>
+              <a href="#contact" class="">About us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="items-center flex gap-5">
+          <button
+            id="book-now"
+            class="bg-white order_now text-black font-semibold px-4 py-2 rounded-lg"
+          >
+            Book Now
+          </button>
+          <!-- Mobile Menu Icon -->
+          <div
+            id="hamburger-price-page"
+            class="lg:hidden relative flex flex-col justify-between text-3xl text-white w-[35px] h-[25px]"
+          >
+            <span
+              class="w-full block h-[3px] bg-white rounded-2xl nav-line"
+            ></span>
+            <span
+              class="w-full block h-[3px] bg-white rounded-2xl nav-line"
+            ></span>
+            <span
+              class="w-full block h-[3px] bg-white rounded-2xl nav-line"
+            ></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Prices -->
+    <div class="pricing_list">
+      <!-- Header: Simple Pricing -->
+      <div
+        class="bg-[#0890F1] py-16 flex justify-center items-center shadow-xl animate-fadeIn"
+      >
+        <h3 class="text-white text-5xl font-bold tracking-wide">
+          Simple Pricing
+        </h3>
+      </div>
+
+      <!-- Subheader: Free delivery -->
+      <div
+        class="bg-[#202B93] py-6 flex justify-center items-center shadow-md animate-fadeIn"
+      >
+        <h3 class="text-white text-lg md:text-xl font-medium">
+          ✨ Free 24h Delivery on All Orders
+        </h3>
+      </div>
+
+      <!-- Pricing Grid -->
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-10 lg:px-28 py-12"
+      >
+        <!-- Card -->
+        <li
+          class="bg-white border border-gray-200 hover:border-[#0890F1] transition-all rounded-2xl p-6 shadow-sm hover:shadow-xl transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            style="background-image: url(../images/packing_shirt.jpg)"
+            class="w-32 h-32 bg-cover bg-center rounded-full mx-auto mb-5 shadow-md"
+          ></div>
+          <h4 class="text-center text-2xl font-semibold mb-2 text-[#202B93]">
+            Shirt
+          </h4>
+          <p
+            class="text-center text-xs uppercase bg-gray-100 text-gray-600 font-semibold border border-gray-200 w-fit mx-auto py-1 px-3 rounded-full mb-4"
+          >
+            Washing + Ironing
+          </p>
+
+          <div class="flex justify-between items-center px-3">
+            <div>
+              <p class="text-gray-400 text-xs mb-1">Price per item</p>
+              <p class="text-gray-700 font-semibold text-lg">From ₦400</p>
+            </div>
+            <button
+              class="bg-[#0890F1] hover:bg-[#067ad0] text-white rounded-full p-2 transition"
+            >
+              <img src="../images/right.png" alt="Select" class="w-5 h-5" />
+            </button>
+          </div>
+        </li>
+
+        <!-- Duplicate card for demo -->
+        <li
+          class="bg-white border border-gray-200 hover:border-[#0890F1] transition-all rounded-2xl p-6 shadow-sm hover:shadow-xl transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            style="background-image: url(../images/duvet_1.png)"
+            class="w-32 h-32 bg-cover bg-center rounded-full mx-auto mb-5 shadow-md"
+          ></div>
+          <h4 class="text-center text-2xl font-semibold mb-2 text-[#202B93]">
+            Duvet Cleaning
+          </h4>
+          <p
+            class="text-center text-xs uppercase bg-gray-100 text-gray-600 font-semibold border border-gray-200 w-fit mx-auto py-1 px-3 rounded-full mb-4"
+          >
+            Deep Wash
+          </p>
+
+          <div class="flex justify-between items-center px-3">
+            <div>
+              <p class="text-gray-400 text-xs mb-1">Price per item</p>
+              <p class="text-gray-700 font-semibold text-lg">From ₦1500</p>
+            </div>
+            <button
+              class="bg-[#0890F1] hover:bg-[#067ad0] text-white rounded-full p-2 transition"
+            >
+              <img src="../images/right.png" alt="Select" class="w-5 h-5" />
+            </button>
+          </div>
+        </li>
+
+        <!-- Another card -->
+        <li
+          class="bg-white border border-gray-200 hover:border-[#0890F1] transition-all rounded-2xl p-6 shadow-sm hover:shadow-xl transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            style="background-image: url(../images/suit_2.jpg)"
+            class="w-32 h-32 bg-cover bg-center rounded-full mx-auto mb-5 shadow-md"
+          ></div>
+          <h4 class="text-center text-2xl font-semibold mb-2 text-[#202B93]">
+            Suit
+          </h4>
+          <p
+            class="text-center text-xs uppercase bg-gray-100 text-gray-600 font-semibold border border-gray-200 w-fit mx-auto py-1 px-3 rounded-full mb-4"
+          >
+            Professional Care
+          </p>
+
+          <div class="flex justify-between items-center px-3">
+            <div>
+              <p class="text-gray-400 text-xs mb-1">Price per item</p>
+              <p class="text-gray-700 font-semibold text-lg">From ₦5000</p>
+            </div>
+            <button
+              class="bg-[#0890F1] hover:bg-[#067ad0] text-white rounded-full p-2 transition"
+            >
+              <img src="../images/right.png" alt="Select" class="w-5 h-5" />
+            </button>
+          </div>
+        </li>
+        <!-- Another card -->
+        <li
+          class="bg-white border border-gray-200 hover:border-[#0890F1] transition-all rounded-2xl p-6 shadow-sm hover:shadow-xl transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            style="background-image: url(../images/gown.jpg)"
+            class="w-32 h-32 bg-cover bg-center rounded-full mx-auto mb-5 shadow-md"
+          ></div>
+          <h4 class="text-center text-2xl font-semibold mb-2 text-[#202B93]">
+            Wedding Gown
+          </h4>
+          <p
+            class="text-center text-xs uppercase bg-gray-100 text-gray-600 font-semibold border border-gray-200 w-fit mx-auto py-1 px-3 rounded-full mb-4"
+          >
+            Professional Care
+          </p>
+
+          <div class="flex justify-between items-center px-3">
+            <div>
+              <p class="text-gray-400 text-xs mb-1">Price per item</p>
+              <p class="text-gray-700 font-semibold text-lg">From ₦5000</p>
+            </div>
+            <button
+              class="bg-[#0890F1] hover:bg-[#067ad0] text-white rounded-full p-2 transition"
+            >
+              <img src="../images/right.png" alt="Select" class="w-5 h-5" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script type="module" src="./pricing.js"></script>
+  </body>
+</html>

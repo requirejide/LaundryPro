@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.transperant_dark {
+  background: rgba(0, 0, 0, 0.797);
+}
+
+.background_pos {
+  background-position: center;
+  background-size: cover;
+}
