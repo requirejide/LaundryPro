@@ -176,8 +176,8 @@ close_scroll_how_it_works.addEventListener("click", () => {
   how_it_works.scrollIntoView({ behavior: "smooth" });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  if ((window.location.hash = "#how_it_works")) {
-    how_it_works.scrollIntoView({ behavior: "smooth" });
-  }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   if ((window.location.hash = "#how_it_works")) {
+//     how_it_works.scrollIntoView({ behavior: "smooth" });
+//   }
+// });
