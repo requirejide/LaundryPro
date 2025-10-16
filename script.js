@@ -1,5 +1,5 @@
 new Typed("#typed", {
-  strings: ["Manchester", "Coventry", "Lisbon"],
+  strings: ["Bashorun", "Akobo", "Oluyole", "Ojo"],
   typeSpeed: 80,
   backSpeed: 50,
   loop: true,
